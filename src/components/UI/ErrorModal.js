@@ -33,7 +33,11 @@ const ErrorModal = (props) => {
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay onConfirm={props.onConfirm} />,
+        <ModalOverlay
+          title={props.title}
+          message={props.message}
+          onConfirm={props.onConfirm}
+        />,
         document.getElementById("overlay-root")
       )}
     </React.Fragment>
